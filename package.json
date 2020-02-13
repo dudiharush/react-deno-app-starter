@@ -7,11 +7,13 @@
   "license": "MIT",
   "scripts": {
     "check-types": "tsc",
-    "build:prod": "webpack -p --config=config/webpack/webpack.prod.ts",
+    "build:prod": "webpack -p --config=config/webpack/webpack.dev.ts",
+    "build:dev": "webpack -p --config=config/webpack/webpack.dev.ts",
     "copy-files": "copyfiles -f dist/*.* server/static",
     "build": "run-s -s clean-dist build:prod copy-files",
     "clean-dist": "rimraf dist/* server/static/*",
-    "start": "deno --allow-read --allow-net server/staticServer.ts",
+    "start": "run-s build:dev run-server",
+    "run-server": "deno --allow-read --allow-net server/staticServer.ts",
     "lint:fix": "eslint src/ --ext .tsx,.ts,.js --fix",
     "typecheck": "tsc"
   },

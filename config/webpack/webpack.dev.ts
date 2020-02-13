@@ -6,15 +6,6 @@ import 'webpack-dev-server'
 export const getDevConfig = (openBrowser = true): WebpackConfiguration => ({
   mode: 'development',
   devtool: 'inline-source-map',
-  devServer: {
-    contentBase: '/dist',
-    port: 8080,
-    open: openBrowser,
-    hot: openBrowser,
-    compress: true,
-    stats: 'errors-only',
-    overlay: true,
-  },
   module: {
     rules: [
       {
