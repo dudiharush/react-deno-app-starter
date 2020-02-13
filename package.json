@@ -1,0 +1,76 @@
+{
+  "name": "react-deno-app-starter",
+  "version": "1.0.0",
+  "description": "A starter template for React, Babel, Webpack And Typescript, with Deno on the server",
+  "repository": "https://github.com/dudiharush/react-deno-app-starter.git",
+  "author": "David Harush <davidharush@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "check-types": "tsc",
+    "build:prod": "webpack -p --config=config/webpack/webpack.prod.ts",
+    "copy-files": "copyfiles -f dist/*.* server/static",
+    "build": "run-s -s clean-dist build:prod copy-files",
+    "clean-dist": "rimraf dist/* server/static/*",
+    "start": "deno --allow-read --allow-net server/staticServer.ts",
+    "lint:fix": "eslint src/ --ext .tsx,.ts,.js --fix",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "rimraf": "^3.0.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/html-webpack-plugin": "^3.2.1",
+    "@types/mini-css-extract-plugin": "^0.8.0",
+    "@types/node": "^12.12.6",
+    "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/terser-webpack-plugin": "^2.2.0",
+    "@types/webpack": "^4.39.8",
+    "@types/webpack-dev-server": "^3.9.0",
+    "@types/webpack-merge": "^4.1.5",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copyfiles": "^2.2.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^1.18.2",
+    "react-docgen-typescript-loader": "^3.3.0",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn run lint:fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
