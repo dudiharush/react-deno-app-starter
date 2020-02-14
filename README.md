@@ -1,6 +1,6 @@
 # react-deno-app-starter
 A starter template for React, Babel, Webpack And Typescript, with Deno on the server.
-
+<img src="./deno-react-love.png"/>
 # installation steps
 
 1. install Deno: https://github.com/denoland/deno_install
