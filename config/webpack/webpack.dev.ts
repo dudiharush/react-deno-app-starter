@@ -1,7 +1,6 @@
 import merge from 'webpack-merge'
 import { getCommonConfig } from './webpack.common'
 import { Configuration as WebpackConfiguration } from 'webpack'
-import 'webpack-dev-server'
 
 export const getDevConfig = (openBrowser = true): WebpackConfiguration => ({
   mode: 'development',
