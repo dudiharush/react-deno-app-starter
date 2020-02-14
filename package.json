@@ -14,7 +14,7 @@
     "clean-build-copy:dev": "run-s -s clean-dist build:dev copy-files",
     "build": "npm run clean-build-copy:prod",
     "clean-dist": "rimraf dist/* server/static/*",
-    "start": "run-s clean-build-copy:dev run-server",
+    "start": "run-s clean-build-copy:dev run-and-open",
     "run-and-open": "run-p run-server open-browser",
     "run-server": "deno --allow-read --allow-net server/staticServer.ts",
     "open-browser": "node scripts/open-browser.js",
