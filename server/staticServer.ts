@@ -5,7 +5,6 @@ import * as path from 'https://deno.land/std/path/mod.ts';
   const app = new Application();
 
   app.use(async ctx => {
-    console.log(path.join(Deno.cwd(),'server','static'));
     const filePath = path.join(Deno.cwd(),'server','static');
     await send(ctx, ctx.request.path, {
       root: filePath,
