@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "check-types": "tsc",
-    "build:prod": "webpack -p --config=config/webpack/webpack.dev.ts",
+    "build:prod": "webpack -p --config=config/webpack/webpack.prod.ts",
     "build:dev": "webpack -p --config=config/webpack/webpack.dev.ts",
     "copy-files": "copyfiles -f dist/*.* server/static",
     "clean-build-copy:prod": "run-s -s clean-dist build:prod copy-files",
