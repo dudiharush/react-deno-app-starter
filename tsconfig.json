@@ -1,20 +1,33 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "jsx": "preserve",
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "strict": true,
-    "noEmit": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "isolatedModules": true,
+    "allowJs": false,
+    "allowUmdGlobalAccess": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "checkJs": false,
     "esModuleInterop": true,
-    "types": ["cypress", "@types/testing-library__cypress"]
-  },
-  "include": [
-    "src", "config/**/*","cypress"
-  ],
-  "files": ["src\\node_modules\\@testing-library]\\jest-dom\\extend-expect.d.ts"]
+    "disableSizeLimit": false,
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "lib": [],
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": false,
+    "noStrictGenericChecks": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveConstEnums": false,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "suppressExcessPropertyErrors": false,
+    "suppressImplicitAnyIndexErrors": false
+  }
 }
