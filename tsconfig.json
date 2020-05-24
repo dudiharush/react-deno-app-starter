@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "target": "es5",
+    "module": "commonjs",
     "allowJs": false,
     "allowUmdGlobalAccess": false,
     "allowUnreachableCode": false,
@@ -10,7 +17,7 @@
     "disableSizeLimit": false,
     "jsx": "react",
     "jsxFactory": "React.createElement",
-    "lib": [],
+    "lib": ["DOM"],
     "noFallthroughCasesInSwitch": false,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -29,5 +36,6 @@
     "strictPropertyInitialization": true,
     "suppressExcessPropertyErrors": false,
     "suppressImplicitAnyIndexErrors": false
-  }
+  },
+  "include": ["src"]
 }
