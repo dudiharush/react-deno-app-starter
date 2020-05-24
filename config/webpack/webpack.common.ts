@@ -36,7 +36,7 @@ export const getCommonConfig = (env: WebpackEnv = {}): webpack.Configuration => 
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: 'Babel + TypeScript + React = ❤️',
+        title: 'Deno + React = ❤️',
         template: 'src/index.html',
       }),
     ],
