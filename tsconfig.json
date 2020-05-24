@@ -37,5 +37,5 @@
     "suppressExcessPropertyErrors": false,
     "suppressImplicitAnyIndexErrors": false
   },
-  "include": ["src"]
+  "include": ["src", "config"]
 }
