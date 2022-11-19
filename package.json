@@ -51,7 +51,7 @@
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
     "mini-css-extract-plugin": "^0.8.0",
@@ -66,7 +66,7 @@
     "ts-node": "^8.4.1",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
   },
